@@ -1,13 +1,11 @@
 import React from "react";
-import Footer from "./Footer";
-
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function HeroSection() {
     return (
         <section className="min-h-screen flex items-center justify-center ">
 
-            <div className="flex flex-col items-center justify-center md:flex-row  w-full max-w-6xl py-10">
+            <div className="flex flex-col items-center justify-center md:flex-row w-full max-w-6xl py-10">
 
                 {/* Left Content */}
                 <div className="w-full md:w-1/2 text-white px-5">
@@ -23,19 +21,43 @@ export default function HeroSection() {
                         Passionate about creating modern, user-friendly web applications
                         with clean code and innovative solutions.
                     </p>
-                    <button className=" text-amber-50 text-base bg-purple-600 px-4 py-2 rounded-3xl cursor-pointer tracking-wider transition-colors hover:text-black z-50">Download CV</button>
+
+                    {/* Buttons container */}
+                    <div className="flex space-x-4 mt-4">
+                        {/* Download CV button */}
+                        <a
+                            href="/path-to-your-cv.pdf"  // replace with actual CV file path or URL
+                            download
+                            className="flex items-center text-amber-50 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-3xl cursor-pointer transition-colors"
+                        >
+                            <i className="bi bi-file-earmark-text text-xl mr-2"></i> Download CV
+                        </a>
+
+
+                        {/* GitHub button */}
+                        <a
+                            href="https://github.com/hasindur"  // your GitHub URL here
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center text-amber-50 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-3xl cursor-pointer transition-colors"
+                        >
+                            <i className="bi bi-github text-xl mr-2"></i> GitHub
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/hasinduranasinghe"  // your LinkedIn URL
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center text-amber-50 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-3xl cursor-pointer transition-colors"
+                        >
+                            <i className="bi bi-linkedin text-xl mr-2"></i> LinkedIn
+                        </a>
+
+                    </div>
                 </div>
 
-                {/* Right side is free for portrait */}
+                {/* Right side for portrait */}
                 <div className="w-full md:w-1/2 flex justify-center items-center">
-                    {/* Your portrait image goes here */}
-                    {/* Example:
-          <img
-            src="/your-portrait.png"
-            alt="Hasindu Portrait"
-            className="w-72 md:w-96 rounded-full shadow-lg"
-          /> 
-          */}
+                    {/* Portrait image placeholder */}
                 </div>
             </div>
 
